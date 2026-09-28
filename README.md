@@ -48,6 +48,11 @@ It combines structured oncology knowledge, retrieval, graph-based representation
 
 ## 🚀 Other selected AI projects
 
+### [Cephalopod AI — Search, RL & Neural Agents](https://github.com/PaoloPangallo/IA_Cephalopod)
+A multi-paradigm game-playing AI project comparing heuristic search, Minimax / Alpha-Beta, MCTS, Optuna tuning, Reinforcement Learning, Behavior Cloning and an AlphaZero-style neural agent.
+
+**Tech:** Python · PyTorch · Reinforcement Learning · MCTS · Minimax · Optuna · Behavior Cloning
+
 ### [LLM + PDDL Automated Planning](https://github.com/PaoloPangallo/PDDL_LLM)
 Generate–validate–refine workflow combining LLMs, RAG and symbolic planning with Fast Downward.
 
