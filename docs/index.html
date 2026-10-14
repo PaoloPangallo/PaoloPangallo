@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Paolo Pangallo — Computer Engineering master's candidate focused on AI systems, agentic workflows, LLMs, machine learning and software engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Paolo Pangallo — AI Engineering Portfolio">
+  <meta property="og:description" content="Selected projects in agentic AI, GraphRAG, machine learning and full-stack software engineering.">
+  <title>Paolo Pangallo — AI Engineering</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;650;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav-pill" aria-label="Primary navigation">
+      <a class="nav-brand" href="#top" aria-label="Paolo Pangallo, back to top">
+        <span class="brand-mark" aria-hidden="true">p.</span>
+        <span>Paolo Pangallo</span>
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#toolkit">Toolkit</a>
+      </div>
+      <a class="button button-primary nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero content-width" aria-labelledby="hero-title">
+      <div class="status-pill"><span class="status-dot" aria-hidden="true"></span> Based in Calabria, Italy · Open to junior AI/ML roles</div>
+      <h1 id="hero-title">I build intelligent<br class="desktop-break"> systems<span class="period">.</span></h1>
+      <p class="hero-subtitle">Hi, I'm Paolo. I connect language models, machine learning and software engineering to make AI useful beyond the notebook.</p>
+      <div class="hero-actions">
+        <a class="button button-primary button-large" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline button-large" href="https://github.com/PaoloPangallo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-bottom">
+        <span class="hero-bottom-label">My work sits at the intersection of</span>
+        <div class="specialties" aria-label="Focus areas"><span>LLM systems</span><span>Retrieval</span><span>Machine learning</span><span>Software</span></div>
+      </div>
+    </section>
+
+    <section class="projects-section section content-width" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">01 / Projects</span>
+          <h2 id="projects-title">Selected work<span class="period">.</span></h2>
+        </div>
+        <p>Things I've built and studied, from agentic applications to graph-based learning and full-stack products.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All projects <span class="filter-count">8</span></button>
+        <button type="button" class="filter" data-filter="ai" aria-pressed="false">AI systems</button>
+        <button type="button" class="filter" data-filter="ml" aria-pressed="false">ML & research</button>
+        <button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card feature-card" data-category="ai software">
+          <div class="project-visual visual-mcp" role="img" aria-label="Conceptual illustration of user request, AI agent and MCP tools">
+            <div class="visual-topline"><span>01 · AI product</span><span>Conceptual architecture ↗</span></div>
+            <div class="workflow" aria-hidden="true">
+              <div class="workflow-node"><span class="squircle">⌕</span><span>User query</span></div>
+              <span class="workflow-arrow">→</span>
+              <div class="workflow-node workflow-primary"><span class="squircle">✳</span><span>AI agent</span></div>
+              <span class="workflow-arrow">→</span>
+              <div class="workflow-node"><span class="squircle">⌘</span><span>MCP tools</span></div>
+            </div>
+            <div class="visual-footer" aria-hidden="true"><span>Retrieval</span><span>eBay</span><span>Memory</span><span>FastAPI</span></div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span>Featured project</span><span>Agentic AI · Full stack</span></div>
+            <h3>MCP E-Commerce<span class="period">.</span></h3>
+            <p>An AI-assisted shopping platform combining explicit agent tools, semantic retrieval, eBay integrations, user context and a React interface.</p>
+            <div class="project-bottom"><span class="project-stack">Python · MCP · FastAPI · React</span><a class="icon-link" href="https://github.com/PaoloPangallo/MCP_E-commerce" target="_blank" rel="noopener noreferrer" aria-label="Explore MCP E-Commerce on GitHub">↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card feature-card" data-category="ai ml">
+          <div class="project-visual visual-graph" role="img" aria-label="Conceptual provenance diagram connecting a clinical case to knowledge, verification and a review dossier">
+            <div class="visual-topline"><span>02 · Master's thesis</span><span>Conceptual architecture ↗</span></div>
+            <svg class="graph-image" viewBox="0 0 530 230" aria-hidden="true" focusable="false">
+              <g stroke="#9d9d9d" stroke-width="1.6" fill="none">
+                <path d="M80 115 180 52 305 112 429 63M80 115 183 185 305 112 427 174M180 52 183 185M429 63 427 174"/>
+                <path d="M180 52 305 112M183 185 427 174" stroke-dasharray="4 6"/>
+              </g>
+              <g fill="#fff" stroke="#141414" stroke-width="2"><circle cx="80" cy="115" r="25"/><circle cx="180" cy="52" r="25"/><circle cx="183" cy="185" r="25"/><circle cx="305" cy="112" r="32"/><circle cx="429" cy="63" r="25"/><circle cx="427" cy="174" r="25"/></g>
+              <g fill="#141414" font-family="Inter, sans-serif" font-size="12" text-anchor="middle" font-weight="600"><text x="80" y="119">Case</text><text x="180" y="56">KG</text><text x="183" y="189">Docs</text><text x="305" y="109">Verify</text><text x="305" y="123" font-size="9" font-weight="400">claims</text><text x="429" y="67">Trace</text><text x="427" y="178">Report</text></g>
+            </svg>
+            <div class="visual-footer" aria-hidden="true"><span>Knowledge</span><span>Evidence</span><span>Provenance</span></div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span>Featured research</span><span>GraphRAG · LLMs</span></div>
+            <h3>MTB GraphRAG<span class="period">.</span></h3>
+            <p>My thesis project: a research architecture for traceable retrieval and evidence verification in Molecular Tumor Board support.</p>
+            <div class="project-bottom"><span class="project-stack">GraphRAG · Neo4j · Retrieval · Verification</span><a class="icon-link" href="https://github.com/PaoloPangallo/MTB_GRAPH_RAG" target="_blank" rel="noopener noreferrer" aria-label="Explore MTB GraphRAG on GitHub">↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card compact-card" data-category="software">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">▤</span><span class="compact-category">Software engineering</span></div>
+          <h3>Full-Stack E-Commerce<span class="period">.</span></h3>
+          <p>An e-commerce application with authentication, catalogue, cart, checkout, orders and backend APIs.</p>
+          <div class="project-bottom"><span class="project-stack">Java · Spring · Angular</span><a class="icon-link" href="https://github.com/PaoloPangallo/PSW_Ecommerce" target="_blank" rel="noopener noreferrer" aria-label="Explore Full-Stack E-Commerce on GitHub">↗</a></div>
+        </article>
+        <article class="project-card compact-card" data-category="ml">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">♞</span><span class="compact-category">Game AI</span></div>
+          <h3>Cephalopod AI<span class="period">.</span></h3>
+          <p>Game-playing agents across Minimax, Monte Carlo tree search, reinforcement learning and neural methods.</p>
+          <div class="project-bottom"><span class="project-stack">PyTorch · MCTS · RL</span><a class="icon-link" href="https://github.com/PaoloPangallo/IA_Cephalopod" target="_blank" rel="noopener noreferrer" aria-label="Explore Cephalopod AI on GitHub">↗</a></div>
+        </article>
+        <article class="project-card compact-card" data-category="ml">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">◎</span><span class="compact-category">Graph learning</span></div>
+          <h3>Paper Recommender<span class="period">.</span></h3>
+          <p>Scientific-paper recommendation using graph representations, precomputed embeddings and Streamlit.</p>
+          <div class="project-bottom"><span class="project-stack">GNNs · OpenAlex · Streamlit</span><a class="icon-link" href="https://github.com/PaoloPangallo/Data-Mining-Streamlit" target="_blank" rel="noopener noreferrer" aria-label="Explore Paper Recommender on GitHub">↗</a></div>
+        </article>
+        <article class="project-card compact-card" data-category="ml">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">▧</span><span class="compact-category">Computer vision</span></div>
+          <h3>Cable Segmentation<span class="period">.</span></h3>
+          <p>Vision Transformer experiments for thin electrical-cable instance segmentation and geometric post-processing.</p>
+          <div class="project-bottom"><span class="project-stack">PyTorch · RF-DETR · CV</span><a class="icon-link" href="https://github.com/PaoloPangallo/Cable-Instance_Segmentation" target="_blank" rel="noopener noreferrer" aria-label="Explore Cable Segmentation on GitHub">↗</a></div>
+        </article>
+        <article class="project-card compact-card" data-category="ai">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">{ }</span><span class="compact-category">Neuro-symbolic AI</span></div>
+          <h3>LLM + PDDL Planning<span class="period">.</span></h3>
+          <p>A generate–validate–refine workflow combining language models and formal planning tools.</p>
+          <div class="project-bottom"><span class="project-stack">LangGraph · Ollama · PDDL</span><a class="icon-link" href="https://github.com/PaoloPangallo/PDDL_LLM" target="_blank" rel="noopener noreferrer" aria-label="Explore LLM + PDDL Planning on GitHub">↗</a></div>
+        </article>
+        <article class="project-card compact-card" data-category="ml">
+          <div class="compact-top"><span class="project-icon" aria-hidden="true">↗</span><span class="compact-category">Multi-agent RL</span></div>
+          <h3>Traffic Signal MARL<span class="period">.</span></h3>
+          <p>Multi-agent reinforcement learning experiments for traffic signal control in SUMO simulations.</p>
+          <div class="project-bottom"><span class="project-stack">SUMO · RLlib · MARL</span><a class="icon-link" href="https://github.com/PaoloPangallo/SUMO_MARL" target="_blank" rel="noopener noreferrer" aria-label="Explore Traffic Signal MARL on GitHub">↗</a></div>
+        </article>
+      </div>
+      <div class="projects-end"><span>Eight projects. Different problems, one engineering mindset.</span><a class="text-link" href="https://github.com/PaoloPangallo?tab=repositories" target="_blank" rel="noopener noreferrer">Browse all repositories ↗</a></div>
+    </section>
+
+    <section class="about-section section content-width" id="about" aria-labelledby="about-title">
+      <div class="about-photo">
+        <div class="portrait-monogram" aria-hidden="true">p<span>.</span></div>
+        <img src="https://avatars.githubusercontent.com/u/154351366?v=4" alt="Paolo Pangallo's public GitHub profile photo" loading="lazy" width="320" height="320">
+        <div class="photo-tag"><span class="squircle dark">✳</span><span>Engineer by practice.<br>Curious by default.</span></div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">02 / About</span>
+        <h2 id="about-title">More than<br>models<span class="period">.</span></h2>
+        <p>I'm completing my Master's degree in Computer Engineering — Artificial Intelligence at the <strong>University of Calabria</strong>.</p>
+        <p>I like building the parts around AI that make it genuinely usable: APIs, data pipelines, tool orchestration, retrieval, validation and clear interfaces.</p>
+        <p>My work moves between hands-on products and academic research. I care about understanding both <em>how a system works</em> and <em>where it can fail</em>.</p>
+        <a class="text-link" href="https://www.linkedin.com/in/paolo-pangallo-9aa456170/" target="_blank" rel="noopener noreferrer">Let's connect on LinkedIn ↗</a>
+      </div>
+    </section>
+
+    <section class="toolkit-section section content-width" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="section-heading">
+        <div><span class="section-label">03 / Toolkit</span><h2 id="toolkit-title">Tools of the trade<span class="period">.</span></h2></div>
+        <p>Technologies used across my software projects and research prototypes.</p>
+      </div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="tool-icon" aria-hidden="true">✳</div><h3>AI systems</h3><p>LLMs · Agentic workflows · MCP · RAG · GraphRAG · Knowledge graphs</p></div>
+        <div class="tool-card"><div class="tool-icon" aria-hidden="true">◎</div><h3>Machine learning</h3><p>PyTorch · scikit-learn · GNNs · Computer vision · Reinforcement learning</p></div>
+        <div class="tool-card"><div class="tool-icon" aria-hidden="true">⌘</div><h3>Backend & data</h3><p>Python · FastAPI · Java · Spring · PostgreSQL · Redis · Neo4j · Qdrant</p></div>
+        <div class="tool-card"><div class="tool-icon" aria-hidden="true">▣</div><h3>Product engineering</h3><p>React · TypeScript · Angular · Docker · Git · REST APIs · Linux</p></div>
+      </div>
+    </section>
+
+    <section class="education-section section content-width" id="education" aria-labelledby="education-title">
+      <div class="education-heading"><span class="section-label">04 / Education</span><h2 id="education-title">Keep learning<span class="period">.</span></h2></div>
+      <div class="education-list">
+        <div class="education-row"><span class="education-date">2024 — present</span><div><h3>M.Sc. Computer Engineering — Artificial Intelligence</h3><p>University of Calabria · Thesis on evidence-grounded AI systems</p></div><span class="soft-label">In progress</span></div>
+        <div class="education-row"><span class="education-date">2020 — 2024</span><div><h3>B.Sc. Computer Engineering</h3><p>University of Calabria</p></div></div>
+        <div class="education-row"><span class="education-date">Additional learning</span><div><h3>Cambridge English B2 & European Patent Office</h3><p>Cambridge B2 certification · EPO “Create – Protect – Innovate” (2024–2025)</p></div></div>
+      </div>
+    </section>
+
+    <footer class="footer-wrap" id="contact">
+      <div class="footer-inner content-width">
+        <div class="footer-upper"><span class="section-label footer-label">05 / Contact</span><a class="footer-back" href="#top">Back to top ↑</a></div>
+        <h2>Let's build<br>something useful<span>.</span></h2>
+        <p>I'm interested in junior AI/ML, GenAI and software engineering opportunities — and in people who care about building solid systems.</p>
+        <div class="footer-actions"><a class="button button-light button-large" href="https://www.linkedin.com/in/paolo-pangallo-9aa456170/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="button button-dark-outline button-large" href="https://github.com/PaoloPangallo" target="_blank" rel="noopener noreferrer">View GitHub ↗</a></div>
+        <div class="footer-bottom"><span>Paolo Pangallo © <span id="year">2026</span></span><span>Made with care. Hosted on GitHub Pages.</span><a href="#top">Top ↑</a></div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
