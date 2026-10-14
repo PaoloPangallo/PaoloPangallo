@@ -3,9 +3,15 @@ name: Portfolio validation
 on:
   push:
     branches: [main]
-    paths: ['docs/**', '.github/workflows/portfolio-validate.yml']
+    paths:
+      - 'docs/**'
+      - 'scripts/check-portfolio.py'
+      - '.github/workflows/portfolio-validate.yml'
   pull_request:
-    paths: ['docs/**', '.github/workflows/portfolio-validate.yml']
+    paths:
+      - 'docs/**'
+      - 'scripts/check-portfolio.py'
+      - '.github/workflows/portfolio-validate.yml'
 
 permissions:
   contents: read
@@ -18,30 +24,4 @@ jobs:
       - name: JavaScript syntax
         run: node --check docs/script.js
       - name: Static portfolio integrity
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          from html.parser import HTMLParser
-          from collections import Counter
-          root = Path('docs')
-          html = (root / 'index.html').read_text(encoding='utf-8')
-          css = (root / 'style.css').read_text(encoding='utf-8')
-          js = (root / 'script.js').read_text(encoding='utf-8')
-          for name in ['favicon.svg', '.nojekyll', 'script.js', 'style.css']:
-              assert (root / name).exists(), name
-          assert 'style.css?v=4' in html and 'script.js?v=4' in html
-          assert 'prefers-reduced-motion' in css
-          assert 'IntersectionObserver' in js
-          assert html.count('class="library-card"') == 8
-          class IdParser(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.ids = []
-              def handle_starttag(self, tag, attrs):
-                  self.ids.extend(value for key, value in attrs if key == 'id')
-          parser = IdParser()
-          parser.feed(html)
-          duplicates = [key for key, count in Counter(parser.ids).items() if count > 1]
-          assert not duplicates, duplicates
-          print('Portfolio syntax, references and accessibility checks passed')
-          PY
+        run: python3 scripts/check-portfolio.py
