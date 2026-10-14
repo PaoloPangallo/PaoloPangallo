@@ -1,4 +1,4 @@
-// Portfolio v4 — functional, accessible interaction. No analytics or external APIs.
+// Portfolio v5 — functional, accessible interaction. No analytics or external APIs.
 const systems = {
   mcp: {
     stages: [
@@ -199,3 +199,86 @@ profilePicture?.addEventListener('error', () => { profilePicture.hidden = true; 
   }, { rootMargin: '-25% 0px -55% 0px', threshold: 0 });
   sections.forEach(section => watcher.observe(section));
 })();
+
+
+/* Recruiter-focused engineering notes: each link points to a public source folder/document.
+   These are implementation descriptions, not fabricated benchmark or deployment claims. */
+const engineeringNotes = {
+  mcp: {
+    design: {
+      label: 'ARCHITECTURE', title: 'Explicit agent and tool boundaries.',
+      detail: 'The application separates orchestration, tool implementations and the user-facing API. The agent coordinates operations; MCP handlers encapsulate integrations.',
+      href: 'https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/app/agent'
+    },
+    checks: {
+      label: 'TESTING / CODE', title: 'Tests around the boundaries.',
+      detail: 'The repository includes tests for agent, MCP and API components, plus CI checks for Python syntax and the React frontend build. These checks are not an end-to-end production guarantee.',
+      href: 'https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/tests'
+    },
+    tradeoffs: {
+      label: 'TRADE-OFF', title: 'Real integrations add variability.',
+      detail: 'An agentic workflow can adapt to a user request, but external services, retrieval and model responses complicate reproduction and runtime testing. Review service configuration and failure paths.',
+      href: 'https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/app/mcp'
+    }
+  },
+  mtb: {
+    design: {
+      label: 'ARCHITECTURE', title: 'Evidence before narration.',
+      detail: 'The research architecture separates case context, knowledge retrieval, claim checking and dossier assembly so that generated language is not mistaken for source evidence.',
+      href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/blob/main/docs/ARCHITECTURE_OVERVIEW.md'
+    },
+    checks: {
+      label: 'VERIFICATION', title: 'A claim needs traceable support.',
+      detail: 'A claim is examined against the retrieved evidence and its provenance. The research focus includes unsupported assertions and explicit uncertainty; this is not clinical validation.',
+      href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/tree/main/mtb-graphrag/backend/pipeline'
+    },
+    tradeoffs: {
+      label: 'TRADE-OFF', title: 'Flexibility versus reproducibility.',
+      detail: 'Agentic retrieval can explore more routes; deterministic steps are easier to replay and audit. Keeping the knowledge base and evaluation conditions explicit matters for meaningful comparisons.',
+      href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/tree/main/mtb-graphrag/backend/pipeline/agentic'
+    }
+  },
+  rl: {
+    design: {
+      label: 'ARCHITECTURE', title: 'Search and learning are alternatives.',
+      detail: 'The project explores minimax and tree search alongside neural and reinforcement-learning agents. Each family models game decisions differently.',
+      href: 'https://github.com/PaoloPangallo/IA_Cephalopod/tree/main/cephalopod/strategies'
+    },
+    checks: {
+      label: 'EXPERIMENTATION', title: 'Keep conditions comparable.',
+      detail: 'A meaningful comparison should control opponent, search budget, hardware and training setup. The repository contains simulation and testing resources; this panel reports no invented scores.',
+      href: 'https://github.com/PaoloPangallo/IA_Cephalopod/tree/main/cephalopod/simulazioni'
+    },
+    tradeoffs: {
+      label: 'TRADE-OFF', title: 'Compute, exploration and learned policies.',
+      detail: 'Search depth and simulations consume online compute, while learned agents shift much of the effort toward data and training. The right choice depends on constraints and evaluation.',
+      href: 'https://github.com/PaoloPangallo/IA_Cephalopod/blob/main/docs/SYSTEM_DESIGN.md'
+    }
+  }
+};
+function initEngineeringNotebooks() {
+  document.querySelectorAll('.decision-lab').forEach(lab => {
+    const options = engineeringNotes[lab.dataset.case];
+    if (!options) return;
+    const buttons = [...lab.querySelectorAll('.decision-tab')];
+    const title = lab.querySelector('.decision-title');
+    const label = lab.querySelector('.decision-label');
+    const desc = lab.querySelector('.decision-description');
+    const link = lab.querySelector('.decision-source');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const item = options[button.dataset.view];
+      if (!item) return;
+      buttons.forEach(tab => {
+        const active = tab === button;
+        tab.classList.toggle('selected', active);
+        tab.setAttribute('aria-pressed', String(active));
+      });
+      title.textContent = item.title;
+      label.textContent = item.label;
+      desc.textContent = item.detail;
+      link.href = item.href;
+      if (typeof animateIn === 'function') animateIn(lab.querySelector('.decision-output'), 4);
+    }));
+  });
+}
+initEngineeringNotebooks();

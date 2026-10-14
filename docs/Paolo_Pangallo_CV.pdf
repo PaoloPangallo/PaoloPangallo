@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3745 >>
+stream
+0.08 0.08 0.08 rg 0 814 595 28 re f
+0.1 0.1 0.1 rg BT /F2 26 Tf 1 0 0 1 46 778 Tm (PAOLO PANGALLO) Tj ET
+0.35 0.35 0.35 rg BT /F1 10 Tf 1 0 0 1 46 757 Tm (Junior AI / Machine Learning Engineer  |  LLM systems, Retrieval, Software) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 46 738 Tm (Rende \(CS\), Italy  |  +39 375 771 5263) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 46 725 Tm (github.com/PaoloPangallo  |  linkedin.com/in/paolo-pangallo-9aa456170/) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 710 m 549 710 l S
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 695 Tm (SELECTED ENGINEERING PROJECTS) Tj ET
+0.1 0.1 0.1 rg BT /F2 12 Tf 1 0 0 1 46 674 Tm (MCP E-Commerce) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 656 Tm (Agentic shopping assistant: MCP tools, eBay integration, retrieval and React interface.) Tj ET
+0.1 0.1 0.1 rg BT /F2 12 Tf 1 0 0 1 46 631 Tm (MTB GraphRAG  -  Master's thesis) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 613 Tm (Research architecture for evidence retrieval, provenance and claim verification.) Tj ET
+0.1 0.1 0.1 rg BT /F2 12 Tf 1 0 0 1 46 588 Tm (Cable Instance Segmentation) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 570 Tm (Instance segmentation for thin cables using RF-DETR and image-based workflows.) Tj ET
+0.1 0.1 0.1 rg BT /F2 12 Tf 1 0 0 1 46 545 Tm (Full-Stack E-Commerce) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 527 Tm (Java / Spring Boot and Angular commerce application with APIs and persistence.) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 509 m 549 509 l S
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 494 Tm (EDUCATION) Tj ET
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 472 Tm (MSc Computer Engineering  -  Artificial Intelligence) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 455 Tm (University of Calabria  |  2024 - present  |  Thesis in progress) Tj ET
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 433 Tm (BSc Computer Engineering) Tj ET
+0.1 0.1 0.1 rg BT /F1 10 Tf 1 0 0 1 46 416 Tm (University of Calabria  |  2020 - 2024) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 398 m 549 398 l S
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 383 Tm (TECHNICAL SKILLS) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 359 Tm (AI / ML) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 134 359 Tm (PyTorch, scikit-learn, GNNs, computer vision, reinforcement learning) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 341 Tm (GenAI) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 134 341 Tm (LLMs, RAG, GraphRAG, MCP, LangGraph) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 323 Tm (Backend) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 134 323 Tm (Python, Java, FastAPI, Spring Boot, PostgreSQL, Neo4j) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 305 Tm (Engineering) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 134 305 Tm (Git, Docker, Linux/WSL, React, TypeScript, REST APIs) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 286 m 549 286 l S
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 271 Tm (CERTIFICATIONS & ADDITIONAL TRAINING) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 249 Tm (Cambridge English  -  B2) Tj ET
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 228 Tm (European Patent Office \(EPO\)  |  Oct 2024 - Jan 2025) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 46 212 Tm (Create - Protect - Innovate: Bringing Ideas to Market  |  Entry level, UV03-2025) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 196 m 549 196 l S
+0.1 0.1 0.1 rg BT /F2 11 Tf 1 0 0 1 46 181 Tm (OTHER AI WORK) Tj ET
+0.1 0.1 0.1 rg BT /F1 9 Tf 1 0 0 1 46 160 Tm (Cephalopod AI  |  LLM + PDDL Planning  |  Graph Paper Recommender  |  SUMO MARL) Tj ET
+0.83 0.83 0.83 RG 0.7 w 46 123 m 549 123 l S
+0.1 0.1 0.1 rg BT /F2 10 Tf 1 0 0 1 46 105 Tm (Portfolio: paolopangallo.github.io/PaoloPangallo/) Tj ET
+0.40 0.40 0.40 rg BT /F1 8 Tf 1 0 0 1 46 86 Tm (Selected projects are research / portfolio work. Details and source code are public on GitHub.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4192
+%%EOF
