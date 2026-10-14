@@ -128,6 +128,9 @@ function setMenu(open) {
 }
 menuButton?.addEventListener('click', () => setMenu(menu.hidden));
 menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('pointerdown', event => {
+ if (menu && !menu.hidden && !event.target.closest('.nav-shell')) setMenu(false);
+});
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu && !menu.hidden) { setMenu(false); menuButton.focus(); } });
 window.addEventListener('resize', () => { if (window.innerWidth > 800) setMenu(false); });
 
@@ -181,25 +184,33 @@ profilePicture?.addEventListener('error', () => { profilePicture.hidden = true; 
   }, { once: true });
 })();
 
-// Highlight the currently read section without changing normal scrolling.
+// Keep active section links accurate, even when scrolling into the footer.
 (function setupSectionTracking() {
-  if (!('IntersectionObserver' in window)) return;
-  const sections = [...document.querySelectorAll('main section[id]')];
-  const navigation = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-  const watcher = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      for (const link of navigation) {
-        const active = link.getAttribute('href') === '#' + entry.target.id;
-        link.classList.toggle('is-current', active);
-        if (active) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
-      }
-    }
-  }, { rootMargin: '-25% 0px -55% 0px', threshold: 0 });
-  sections.forEach(section => watcher.observe(section));
+ const sections = ['work','explore','approach','about','contact'].map(id => document.getElementById(id)).filter(Boolean);
+ const links = [...document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]')];
+ if (!sections.length || !links.length) return;
+ let scheduled = false;
+ function updateCurrentSection() {
+   const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 24;
+   const threshold = window.scrollY + Math.min(window.innerHeight * .35, 240);
+   let current = nearBottom ? 'contact' : '';
+   if (!nearBottom) for (const section of sections) {
+     if (section.getBoundingClientRect().top + window.scrollY <= threshold) current = section.id;
+   }
+   for (const link of links) {
+     const active = link.getAttribute('href') === '#' + current;
+     link.classList.toggle('is-current', active);
+     if (active) link.setAttribute('aria-current','location');
+     else link.removeAttribute('aria-current');
+   }
+   scheduled = false;
+ }
+ window.addEventListener('scroll', () => {
+   if (!scheduled) { scheduled = true; requestAnimationFrame(updateCurrentSection); }
+ }, {passive:true});
+ window.addEventListener('resize', updateCurrentSection);
+ updateCurrentSection();
 })();
-
 
 /* Recruiter-focused engineering notes: each link points to a public source folder/document.
    These are implementation descriptions, not fabricated benchmark or deployment claims. */
