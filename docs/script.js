@@ -1,4 +1,4 @@
-// Portfolio v3 — functional, accessible interaction. No analytics or external APIs.
+// Portfolio v4 — functional, accessible interaction. No analytics or external APIs.
 const systems = {
   mcp: {
     stages: [
@@ -28,8 +28,18 @@ const systems = {
 let activeSystem = 'mcp';
 let activeStage = 0;
 const pipeline = document.getElementById('stage-pipeline');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const canAnimate = () => !motionPreference.matches;
+function animateIn(element, distance = 8) {
+  if (!canAnimate() || !element || typeof element.animate !== 'function') return;
+  element.animate(
+    [{ opacity: .35, transform: 'translate3d(0,' + distance + 'px,0)' },
+     { opacity: 1, transform: 'translate3d(0,0,0)' }],
+    { duration: 260, easing: 'cubic-bezier(.22,1,.36,1)' }
+  );
+}
 const tabs = [...document.querySelectorAll('.stage-tab')];
-function renderExplorer() {
+function renderExplorer({ animateNodes = false, restoreFocus = false } = {}) {
   if (!pipeline) return;
   pipeline.replaceChildren();
   const stages = systems[activeSystem].stages;
@@ -49,7 +59,7 @@ function renderExplorer() {
     const num = document.createElement('span'); num.className = 'step-no'; num.textContent = String(index + 1).padStart(2, '0');
     const text = document.createElement('span'); text.className = 'step-name'; text.textContent = stage.short;
     button.append(num, text);
-    button.addEventListener('click', () => { activeStage = index; renderExplorer(); });
+    button.addEventListener('click', () => { activeStage = index; renderExplorer({ restoreFocus: true }); });
     pipeline.append(button);
   });
   const stage = stages[activeStage];
@@ -57,12 +67,23 @@ function renderExplorer() {
   document.getElementById('inspector-title').textContent = stage.title;
   document.getElementById('inspector-description').textContent = stage.detail;
   document.getElementById('inspector-link').href = stage.href;
+  if (restoreFocus) pipeline.querySelector('.pipeline-step.current')?.focus({ preventScroll: true });
+  const inspector = document.querySelector('.stage-inspector');
+  if (animateNodes && canAnimate()) {
+    pipeline.querySelectorAll('.pipeline-step').forEach((node, i) => {
+      if (typeof node.animate === 'function') node.animate(
+        [{ opacity: .3, transform: 'translate3d(0,7px,0)' }, { opacity: 1, transform: 'translate3d(0,0,0)' }],
+        { duration: 320, delay: i * 35, easing: 'cubic-bezier(.22,1,.36,1)' }
+      );
+    });
+  }
+  if (animateNodes || restoreFocus) animateIn(inspector, 5);
 }
 tabs.forEach(button => button.addEventListener('click', () => {
   activeSystem = button.dataset.system;
   activeStage = 0;
   tabs.forEach(tab => { const yes = tab === button; tab.classList.toggle('active', yes); tab.setAttribute('aria-pressed', String(yes)); });
-  renderExplorer();
+  renderExplorer({ animateNodes: true });
 }));
 renderExplorer();
 
@@ -114,7 +135,7 @@ const progress = document.getElementById('scroll-progress');
 let ticking = false;
 function updateProgress() {
   const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-  if (progress) progress.style.width = `${Math.max(0, Math.min(100, window.scrollY / max * 100))}%`;
+  if (progress) progress.style.transform = 'scaleX(' + Math.max(0, Math.min(1, window.scrollY / max)) + ')';
   ticking = false;
 }
 window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; } }, { passive: true });
@@ -123,3 +144,58 @@ const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
 const profilePicture = document.querySelector('.about-photo img');
 profilePicture?.addEventListener('error', () => { profilePicture.hidden = true; });
+
+// Progressive enhancement: no JS, no IntersectionObserver or reduced motion
+// always means content stays immediately readable and visible.
+(function setupScrollMotion() {
+  if (!canAnimate() || !('IntersectionObserver' in window)) return;
+  const animated = [
+    ...document.querySelectorAll('.section-heading, .snapshot-bar > div, .case-art, .case-content, .library-card, .principle, .toolkit-intro, .skill-group, .about-left, .about-right, .footer-main > div:first-child')
+  ];
+  const observer = new IntersectionObserver((entries, io) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+  }, { threshold: .08, rootMargin: '0px 0px -4% 0px' });
+  const viewHeight = window.innerHeight;
+  for (const element of animated) {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < viewHeight * .93) continue;
+    const staggerGroup = element.classList.contains('library-card')
+      ? [...element.parentElement.children].indexOf(element) % 4
+      : element.classList.contains('principle')
+        ? [...element.parentElement.children].indexOf(element)
+        : 0;
+    element.style.setProperty('--reveal-delay', String(Math.min(staggerGroup * 50, 150)) + 'ms');
+    element.classList.add('reveal-on-scroll');
+    observer.observe(element);
+  }
+  document.documentElement.classList.add('motion-ready');
+
+  motionPreference.addEventListener?.('change', event => {
+    if (!event.matches) return;
+    for (const element of animated) element.classList.add('is-visible');
+    observer.disconnect();
+  }, { once: true });
+})();
+
+// Highlight the currently read section without changing normal scrolling.
+(function setupSectionTracking() {
+  if (!('IntersectionObserver' in window)) return;
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navigation = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const watcher = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      for (const link of navigation) {
+        const active = link.getAttribute('href') === '#' + entry.target.id;
+        link.classList.toggle('is-current', active);
+        if (active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      }
+    }
+  }, { rootMargin: '-25% 0px -55% 0px', threshold: 0 });
+  sections.forEach(section => watcher.observe(section));
+})();
