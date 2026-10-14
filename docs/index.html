@@ -8,13 +8,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Paolo Pangallo — AI / ML Engineering" />
   <meta property="og:description" content="Selected work, architecture notes and experiments in applied AI, machine learning and software engineering." />
+  <link rel="canonical" href="https://paolopangallo.github.io/PaoloPangallo/" />
+  <meta property="og:url" content="https://paolopangallo.github.io/PaoloPangallo/" />
+  <meta name="robots" content="index,follow" />
   <title>Paolo Pangallo — AI / ML Engineering</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;450;500;550;600;650;700;750&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=4" />
-  <script src="./script.js?v=4" defer></script>
+  <link rel="stylesheet" href="./style.css?v=5" />
+  <script src="./script.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,9 +41,9 @@
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-icon" aria-hidden="true">✳</span> Paolo Pangallo <span class="slash">/</span> AI &amp; Software</div>
-        <h1 id="hero-title">Hi, I'm Paolo.<br/><span>I work on AI &amp;<br/>Machine Learning.</span></h1>
-        <p class="lead">I'm a Computer Engineering master's candidate at the <strong>University of Calabria</strong>, focusing on artificial intelligence. Here you'll find the systems I've built, the experiments I've explored and the engineering choices behind them.</p>
-        <div class="hero-buttons"><a class="btn btn-dark" href="#work">Explore projects <span aria-hidden="true">↗</span></a><a class="btn btn-stroke" href="#about">A bit about me <span aria-hidden="true">↓</span></a></div>
+        <h1 id="hero-title">Hi, I'm Paolo.<br/><span>I work on AI systems,<br/>from models to software.</span></h1>
+        <p class="lead">I'm completing an MSc in Computer Engineering (Artificial Intelligence) at the <strong>University of Calabria</strong>. I work on retrieval, LLM applications, machine learning experiments and the engineering that connects them. This portfolio explains both what I built and the decisions behind it.</p>
+        <div class="hero-buttons"><a class="btn btn-dark" href="#work">Explore projects <span aria-hidden="true">↗</span></a><a class="btn btn-stroke" href="./Paolo_Pangallo_CV.pdf" download="Paolo_Pangallo_CV.pdf" type="application/pdf">Download CV <span aria-hidden="true">↓</span></a></div>
         <p class="availability"><span class="availability-dot" aria-hidden="true"></span> Based in Calabria, Italy <span class="avail-sep">·</span> Open to junior AI/ML opportunities</p>
       </div>
       <div class="hero-stage" aria-label="Interactive project architecture explorer">
@@ -66,6 +69,21 @@
           <div class="art-caption">Simplified architecture · explore actual code in the repository</div>
         </div>
         <div class="case-content"><div class="case-number"><span>01 / Featured engineering project</span><span class="case-status">Full-stack + AI</span></div><h3>MCP E-Commerce<span class="dot">.</span></h3><p class="case-summary">An AI-assisted shopping platform integrating agent orchestration, MCP tools, eBay services, retrieval and a React frontend.</p><dl class="case-facts"><div><dt>Problem</dt><dd>Turn flexible product requests into explicit actions while keeping the application usable.</dd></div><div><dt>Engineering</dt><dd>Tool integration, API design, search and ranking, state management and persistence.</dd></div><div><dt>Stack</dt><dd>Python · FastAPI · MCP · React · PostgreSQL · Redis · Qdrant</dd></div></dl>
+          <div class="decision-lab" data-case="mcp" aria-label="Engineering walkthrough for MCP E-Commerce">
+            <div class="decision-lab-heading"><span class="decision-kicker">Engineering notebook / 01</span><span class="decision-hint">Explore the choices</span></div>
+            <div class="decision-tabs" role="group" aria-label="MCP E-Commerce technical topics">
+              <button class="decision-tab selected" data-view="design" type="button" aria-pressed="true">Design</button>
+              <button class="decision-tab" data-view="checks" type="button" aria-pressed="false">Checks</button>
+              <button class="decision-tab" data-view="tradeoffs" type="button" aria-pressed="false">Trade-offs</button>
+            </div>
+            <div class="decision-output" aria-live="polite" aria-atomic="true">
+              <p class="decision-label">Architecture</p>
+              <h4 class="decision-title">Explicit agent and tool boundaries.</h4>
+              <p class="decision-description">Rather than treating a shopping request as a single prompt, the application separates agent orchestration, MCP tools, search services and product-facing APIs.</p>
+              <a class="decision-source" href="https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/app/agent" target="_blank" rel="noopener noreferrer">Inspect related code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
           <details class="case-details"><summary>Technical notes <span aria-hidden="true">+</span></summary><div class="case-detail-body">The repository separates agent orchestration, MCP tooling, search services and application APIs. External eBay/LLM integrations require configuration. The project also includes automated Python and frontend build checks.</div></details>
           <a class="case-link" href="https://github.com/PaoloPangallo/MCP_E-commerce" target="_blank" rel="noopener noreferrer">Read code &amp; documentation <span aria-hidden="true">↗</span></a>
         </div>
@@ -77,6 +95,21 @@
           <div class="art-subsystem"><span>GRAPH</span><span>PROVENANCE</span><span>RETRIEVAL</span><span>VERIFICATION</span></div><div class="art-caption">Research system · conceptual representation, not clinical validation</div>
         </div>
         <div class="case-content"><div class="case-number"><span>02 / Research project</span><span class="case-status">LLMs + GraphRAG</span></div><h3>MTB GraphRAG<span class="dot">.</span></h3><p class="case-summary">My master's thesis explores an architecture for evidence-grounded AI support in Molecular Tumor Boards, with a focus on traceability and verification.</p><dl class="case-facts"><div><dt>Problem</dt><dd>LLM-generated statements need inspectable sources, not just plausible language.</dd></div><div><dt>Engineering</dt><dd>Structured knowledge, retrieval, claim verification and evidence provenance.</dd></div><div><dt>Focus</dt><dd>GraphRAG · Knowledge Graphs · LLMs · Reproducibility</dd></div></dl>
+          <div class="decision-lab" data-case="mtb" aria-label="Engineering walkthrough for MTB GraphRAG">
+            <div class="decision-lab-heading"><span class="decision-kicker">Engineering notebook / 02</span><span class="decision-hint">Explore the choices</span></div>
+            <div class="decision-tabs" role="group" aria-label="MTB GraphRAG technical topics">
+              <button class="decision-tab selected" data-view="design" type="button" aria-pressed="true">Design</button>
+              <button class="decision-tab" data-view="checks" type="button" aria-pressed="false">Checks</button>
+              <button class="decision-tab" data-view="tradeoffs" type="button" aria-pressed="false">Trade-offs</button>
+            </div>
+            <div class="decision-output" aria-live="polite" aria-atomic="true">
+              <p class="decision-label">Architecture</p>
+              <h4 class="decision-title">Inspect the evidence behind a claim.</h4>
+              <p class="decision-description">Retrieval and verification are separate concerns. The architecture is designed around structured sources, provenance and explicit handling of unsupported statements.</p>
+              <a class="decision-source" href="https://github.com/PaoloPangallo/MTB_GRAPH_RAG/blob/main/docs/ARCHITECTURE_OVERVIEW.md" target="_blank" rel="noopener noreferrer">Inspect related code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
           <details class="case-details"><summary>Research boundaries <span aria-hidden="true">+</span></summary><div class="case-detail-body">This is a research prototype, not a medical device. It does not provide autonomous therapeutic decisions. Different experimental configurations may require distinct datasets, service endpoints and evaluation conditions.</div></details>
           <a class="case-link" href="https://github.com/PaoloPangallo/MTB_GRAPH_RAG" target="_blank" rel="noopener noreferrer">Explore the architecture <span aria-hidden="true">↗</span></a>
         </div>
@@ -85,6 +118,21 @@
       <article class="case-row" id="case-rl">
         <div class="case-art case-art-rl"><div class="art-bar"><span>EXPERIMENTS / 03</span><span>CLASSICAL + LEARNED AI</span></div><div class="art-title">Different agents. Different ways to search.</div><div class="rl-visual"><div class="rl-board" aria-hidden="true"><span>●</span><span></span><span></span><span>○</span><span></span><span>●</span><span>○</span><span></span><span></span><span>●</span><span></span><span></span><span>○</span><span></span><span>●</span><span></span></div><div class="rl-methods"><span>MINIMAX</span><span class="method-line"></span><span>MCTS</span><span class="method-line"></span><span>REINFORCEMENT LEARNING</span><span class="method-line"></span><span>NEURAL AGENTS</span></div></div><div class="art-caption">Conceptual illustration of search and learning approaches</div></div>
         <div class="case-content"><div class="case-number"><span>03 / Machine learning &amp; search</span><span class="case-status">Experimental AI</span></div><h3>Cephalopod AI<span class="dot">.</span></h3><p class="case-summary">A game-playing AI project investigating heuristic search, Monte Carlo Tree Search, reinforcement learning and neural approaches.</p><dl class="case-facts"><div><dt>Problem</dt><dd>Explore alternative strategies for selecting actions in a game environment.</dd></div><div><dt>Approaches</dt><dd>Minimax / Alpha-Beta, MCTS, behavioral cloning and AlphaZero-style agents.</dd></div><div><dt>Stack</dt><dd>Python · PyTorch · Optuna · Reinforcement Learning</dd></div></dl>
+          <div class="decision-lab" data-case="rl" aria-label="Engineering walkthrough for Cephalopod AI">
+            <div class="decision-lab-heading"><span class="decision-kicker">Engineering notebook / 03</span><span class="decision-hint">Explore the choices</span></div>
+            <div class="decision-tabs" role="group" aria-label="Cephalopod AI technical topics">
+              <button class="decision-tab selected" data-view="design" type="button" aria-pressed="true">Design</button>
+              <button class="decision-tab" data-view="checks" type="button" aria-pressed="false">Checks</button>
+              <button class="decision-tab" data-view="tradeoffs" type="button" aria-pressed="false">Trade-offs</button>
+            </div>
+            <div class="decision-output" aria-live="polite" aria-atomic="true">
+              <p class="decision-label">Architecture</p>
+              <h4 class="decision-title">Different decision-making strategies.</h4>
+              <p class="decision-description">The repository explores classical search alongside learning-based agents. These approaches have different computational needs and evaluation assumptions.</p>
+              <a class="decision-source" href="https://github.com/PaoloPangallo/IA_Cephalopod/tree/main/cephalopod/strategies" target="_blank" rel="noopener noreferrer">Inspect related code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
           <details class="case-details"><summary>Experimental notes <span aria-hidden="true">+</span></summary><div class="case-detail-body">The methods use different assumptions and training setups, so their outcomes should not be compared without matching evaluation conditions. The repository documents the variants and their limitations.</div></details><a class="case-link" href="https://github.com/PaoloPangallo/IA_Cephalopod" target="_blank" rel="noopener noreferrer">Examine the experiments <span aria-hidden="true">↗</span></a>
         </div>
       </article>
@@ -113,7 +161,7 @@
 
     <section class="about-section section-gap" id="about" aria-labelledby="about-title"><div class="wrap about-layout"><div class="about-left"><div class="section-index">04 <span>/</span> Background</div><h2 id="about-title">A little more<br/>about me<span class="dot">.</span></h2><p>I'm finishing a master's degree in Computer Engineering, specializing in Artificial Intelligence, at the University of Calabria.</p><p>I enjoy projects where ML and software engineering meet: exploring ideas, writing the surrounding systems, and thinking through what can be verified rather than just demonstrated.</p><div class="about-links"><a class="btn btn-dark" href="https://www.linkedin.com/in/paolo-pangallo-9aa456170/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="btn btn-stroke" href="https://github.com/PaoloPangallo" target="_blank" rel="noopener noreferrer">My GitHub ↗</a></div></div><div class="about-right"><div class="about-photo"><img src="https://avatars.githubusercontent.com/u/154351366?v=4" alt="Paolo Pangallo — GitHub profile photo" width="144" height="144" loading="lazy" /><div><span class="small-overline">PERSON / PROFILE</span><h3>Paolo Pangallo</h3><p>Computer Engineering · AI</p><span class="photo-place">Rende / Calabria, Italy</span></div></div><div class="background-list"><div><span>2024 — current</span><div><strong>M.Sc. Computer Engineering</strong><p>Artificial Intelligence · University of Calabria · Thesis in progress</p></div></div><div><span>2020 — 2024</span><div><strong>B.Sc. Computer Engineering</strong><p>University of Calabria</p></div></div><div><span>2024 — 2025</span><div><strong>European Patent Office</strong><p>Create – Protect – Innovate: Bringing Ideas to Market</p></div></div><div><span>English</span><div><strong>Cambridge B2</strong><p>Certified English proficiency</p></div></div></div></div></div></section>
 
-    <footer class="site-footer" id="contact"><div class="wrap"><div class="footer-top"><span>05 / Contact</span><a href="#top">Back to top ↑</a></div><div class="footer-main"><div><p class="footer-kicker">Interested in collaborating?</p><h2>Let's talk about<br/>AI &amp; software<span>.</span></h2><p>I'm exploring junior opportunities in AI/ML, GenAI and software engineering. If a project or role looks relevant, you can reach me through LinkedIn.</p><div class="footer-buttons"><a class="btn btn-white" href="https://www.linkedin.com/in/paolo-pangallo-9aa456170/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn btn-black-outline" href="https://github.com/PaoloPangallo" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="footer-mark" aria-hidden="true">pp.</div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Paolo Pangallo</span><span>Selected work · research · software</span><span>Built with HTML, CSS &amp; JavaScript</span></div></div></footer>
+    <footer class="site-footer" id="contact"><div class="wrap"><div class="footer-top"><span>05 / Contact</span><a href="#top">Back to top ↑</a></div><div class="footer-main"><div><p class="footer-kicker">Interested in collaborating?</p><h2>Let's talk about<br/>AI &amp; software<span>.</span></h2><p>I'm exploring junior opportunities in AI/ML, GenAI and software engineering. If a project or role looks relevant, you can reach me through LinkedIn.</p><div class="footer-buttons"><a class="btn btn-white" href="https://www.linkedin.com/in/paolo-pangallo-9aa456170/" target="_blank" rel="noopener noreferrer">Contact on LinkedIn ↗</a><a class="btn btn-black-outline" href="./Paolo_Pangallo_CV.pdf" download="Paolo_Pangallo_CV.pdf" type="application/pdf">Download CV ↓</a><a class="btn btn-black-outline" href="https://github.com/PaoloPangallo" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="footer-mark" aria-hidden="true">pp.</div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Paolo Pangallo</span><span>Selected work · research · software</span><span>Built with HTML, CSS &amp; JavaScript</span></div></div></footer>
   </main>
 </body>
 </html>
