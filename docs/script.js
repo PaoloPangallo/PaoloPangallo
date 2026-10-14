@@ -222,9 +222,12 @@ const engineeringNotes = {
       href: 'https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/app/agent'
     },
     checks: {
-      label: 'TESTING / CODE', title: 'Tests around the boundaries.',
-      detail: 'The repository includes tests for agent, MCP and API components, plus CI checks for Python syntax and the React frontend build. These checks are not an end-to-end production guarantee.',
-      href: 'https://github.com/PaoloPangallo/MCP_E-commerce/tree/Paolo_minimax2.7/tests'
+      label: 'SOURCE-BACKED TEST', title: 'An unknown tool mode falls back to standard.',
+      detail: 'The API request test asserts that an unrecognized MCP mode is normalized to "standard" rather than being passed to tool execution. This is a contract test, not a live eBay or LLM integration result.',
+      exampleInput: 'mcp_mode = "unknown_value"',
+      exampleExpected: 'assert mcp_mode == "standard"',
+      linkText: 'Inspect the regression test',
+      href: 'https://github.com/PaoloPangallo/MCP_E-commerce/blob/Paolo_minimax2.7/tests/api/test_agent_stream_mcp_mode.py'
     },
     tradeoffs: {
       label: 'TRADE-OFF', title: 'Real integrations add variability.',
@@ -239,9 +242,12 @@ const engineeringNotes = {
       href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/blob/main/docs/ARCHITECTURE_OVERVIEW.md'
     },
     checks: {
-      label: 'VERIFICATION', title: 'A claim needs traceable support.',
-      detail: 'A claim is examined against the retrieved evidence and its provenance. The research focus includes unsupported assertions and explicit uncertainty; this is not clinical validation.',
-      href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/tree/main/mtb-graphrag/backend/pipeline'
+      label: 'SOURCE-BACKED TEST', title: 'The event ledger rejects tampering.',
+      detail: 'A regression test appends two synthetic events, verifies their hash linkage and asserts that SQL UPDATE and DELETE attempts raise integrity errors. This demonstrates an isolated ledger property, not clinical or end-to-end validation.',
+      exampleInput: 'UPDATE / DELETE agent_events',
+      exampleExpected: 'raises sqlite3.IntegrityError',
+      linkText: 'Inspect the ledger test',
+      href: 'https://github.com/PaoloPangallo/MTB_GRAPH_RAG/blob/main/mtb-graphrag/backend/tests/test_agentic_runtime.py'
     },
     tradeoffs: {
       label: 'TRADE-OFF', title: 'Flexibility versus reproducibility.',
@@ -256,9 +262,12 @@ const engineeringNotes = {
       href: 'https://github.com/PaoloPangallo/IA_Cephalopod/tree/main/cephalopod/strategies'
     },
     checks: {
-      label: 'EXPERIMENTATION', title: 'Keep conditions comparable.',
-      detail: 'A meaningful comparison should control opponent, search budget, hardware and training setup. The repository contains simulation and testing resources; this panel reports no invented scores.',
-      href: 'https://github.com/PaoloPangallo/IA_Cephalopod/tree/main/cephalopod/simulazioni'
+      label: 'SOURCE-BACKED EXAMPLE', title: 'Capture decisions use an explicit pip-sum rule.',
+      detail: 'The core mechanics enumerate orthogonally adjacent dice subsets of at least two pieces and accept sums no greater than six. The example follows the implementation; it does not establish which AI agent plays better.',
+      exampleInput: 'adjacent dice: 2 + 3',
+      exampleExpected: 'capturable subset · sum = 5',
+      linkText: 'Inspect capture mechanics',
+      href: 'https://github.com/PaoloPangallo/IA_Cephalopod/blob/main/cephalopod/core/mechanics.py'
     },
     tradeoffs: {
       label: 'TRADE-OFF', title: 'Compute, exploration and learned policies.',
@@ -276,6 +285,24 @@ function initEngineeringNotebooks() {
     const label = lab.querySelector('.decision-label');
     const desc = lab.querySelector('.decision-description');
     const link = lab.querySelector('.decision-source');
+    const example = document.createElement('div');
+    example.className = 'decision-example';
+    example.hidden = true;
+    const input = document.createElement('div');
+    const result = document.createElement('div');
+    for (const [target, heading] of [[input, 'INPUT'], [result, 'EXPECTED BY TEST / CODE']]) {
+      const tag = document.createElement('span');
+      tag.className = 'decision-example-label';
+      tag.textContent = heading;
+      const value = document.createElement('code');
+      target.append(tag, value);
+    }
+    const arrow = document.createElement('span');
+    arrow.className = 'decision-example-arrow';
+    arrow.setAttribute('aria-hidden','true');
+    arrow.textContent = '→';
+    example.append(input, arrow, result);
+    lab.querySelector('.decision-output').insertBefore(example, link);
     buttons.forEach(button => button.addEventListener('click', () => {
       const item = options[button.dataset.view];
       if (!item) return;
@@ -288,6 +315,12 @@ function initEngineeringNotebooks() {
       label.textContent = item.label;
       desc.textContent = item.detail;
       link.href = item.href;
+      if (link.firstChild?.nodeType === Node.TEXT_NODE) link.firstChild.textContent = (item.linkText || 'Inspect related code') + ' ';
+      example.hidden = !item.exampleInput;
+      if (!example.hidden) {
+        input.querySelector('code').textContent = item.exampleInput;
+        result.querySelector('code').textContent = item.exampleExpected || '';
+      }
       if (typeof animateIn === 'function') animateIn(lab.querySelector('.decision-output'), 4);
     }));
   });
