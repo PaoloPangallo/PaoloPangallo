@@ -209,6 +209,6 @@ img,svg{max-width:100%}svg{display:block}h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{font
 @media(max-width:380px){
  .stage-tab{padding:8px 5px}
  .mcp-node strong{font-size:11px}
- .mcp-node>span:not(.node-symbol){font-size:9px}
+ .mcp-node>span:not(.node-symbol){font-size:10px}
  .rl-board{width:158px;height:158px}
 }
