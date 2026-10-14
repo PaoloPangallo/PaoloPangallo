@@ -2,6 +2,13 @@
 
 Responsive portfolio site published with GitHub Pages from `docs/`.
 
+## Motion and accessibility
+
+- Progressive one-shot reveal animations and smooth, non-continuous hover feedback.
+- Architecture explorer transitions preserve keyboard focus.
+- `prefers-reduced-motion` support, no tracking or effects library.
+- Site content remains visible without JavaScript; there are no added screenshots or gradients.
+
 ## What's included
 
 - Interactive **system explorer** for MCP E-Commerce, MTB GraphRAG and Cephalopod AI; selectable stages and contextual source links
