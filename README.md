@@ -1,106 +1,111 @@
-# Hi, I'm Paolo Pangallo 👋
+<div align="center">
 
-### AI / Machine Learning Engineer · Full-Stack & AI Systems
+<img src="./assets/hero.svg" width="100%" alt="Paolo Pangallo — AI Engineering portfolio" />
 
-I'm completing my Master's degree in **Computer Engineering — Artificial Intelligence** at the University of Calabria.
+<br />
 
-I enjoy building AI systems that go beyond notebooks and isolated models: complete applications with APIs, databases, retrieval, authentication, tool integration, evaluation and usable interfaces.
+**M.Sc. candidate in Computer Engineering — Artificial Intelligence · University of Calabria 🇮🇹**
 
-My strongest projects combine **software engineering and AI engineering**, from a conventional full-stack e-commerce platform to an MCP-based intelligent shopping assistant.
+I build AI systems that connect **models, tools, data and real applications**.
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paolo-pangallo-9aa456170/)
+[![GitHub](https://img.shields.io/badge/GitHub-Explore_projects-7C5CFC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PaoloPangallo?tab=repositories)
+![Focus](https://img.shields.io/badge/Open_to-Junior_AI%2FML_roles-00A991?style=for-the-badge)
 
-## ⭐ Flagship engineering projects
+</div>
 
-### [MCP E-Commerce — AI Shopping Assistant](https://github.com/PaoloPangallo/MCP_E-commerce)
+## ✦ Featured projects
 
-A complete AI-assisted shopping platform built around **Model Context Protocol, agentic workflows and eBay**.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The system combines an MCP tool layer, custom agent orchestration, semantic retrieval, seller/trust analysis, user memory and price tracking with a FastAPI backend and a React/TypeScript frontend.
+### 🛍️ [MCP E-Commerce](https://github.com/PaoloPangallo/MCP_E-commerce)
 
-**Stack:** Python · FastAPI · MCP · LLMs · RAG · Qdrant · PostgreSQL · Redis · React · TypeScript · Docker · Playwright
+**Agentic AI · MCP · RAG**
 
-**What it demonstrates:** AI engineering, agent/tool design, backend architecture, retrieval, state and persistence, external integrations and end-to-end product development.
+AI-assisted shopping platform integrating tool-driven agents, eBay, semantic search, seller analysis and user context with a full-stack web application.
 
-### [Full-Stack E-Commerce Platform](https://github.com/PaoloPangallo/PSW_Ecommerce)
+<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/> <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
 
-A working e-commerce application covering authentication, catalogue, cart, checkout, orders, payments, reviews, shipping, wishlists and user management.
+[**Explore architecture →**](https://github.com/PaoloPangallo/MCP_E-commerce#architecture)
 
-The backend follows a layered Spring architecture and the application includes a complete Angular frontend.
+</td>
+<td width="50%" valign="top">
 
-**Stack:** Java 17 · Spring Boot · Spring Security · JWT · JPA · PostgreSQL · Angular 19 · TypeScript · REST APIs · JUnit · Mockito
+### 🧬 [MTB GraphRAG](https://github.com/PaoloPangallo/MTB_GRAPH_RAG)
 
-**What it demonstrates:** software architecture, full-stack development, domain modelling, security, persistence, testing and implementation of a complete business application.
+**LLMs · Knowledge Graphs · Evidence verification**
 
----
+Master's thesis prototype exploring traceable retrieval, controlled orchestration and verifiable evidence for Molecular Tumor Boards.
 
-## 🔬 AI research
+<img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white"/> <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img alt="Research" src="https://img.shields.io/badge/Research-8B5CF6?style=flat-square"/>
 
-### [MTB GraphRAG](https://github.com/PaoloPangallo/MTB_GRAPH_RAG)
+[**Explore research →**](https://github.com/PaoloPangallo/MTB_GRAPH_RAG#architecture)
 
-My Master's thesis project: an **evidence-grounded AI architecture for Molecular Tumor Board support**.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-It combines structured oncology knowledge, retrieval, graph-based representations and language models with explicit attention to traceability, reproducibility, evidence verification and human review.
+### 🛒 [Full-Stack E-Commerce](https://github.com/PaoloPangallo/PSW_Ecommerce)
 
-**Focus:** GraphRAG · LLMs · Knowledge Graphs · Information Retrieval · Evidence Verification · FastAPI · Neo4j
+**Software architecture · Java · Angular**
 
----
+Complete commerce application with authentication, product management, cart, orders, persistence and REST APIs.
 
-## 🚀 Other selected AI projects
+<img alt="Spring" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/> <img alt="Angular" src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white"/>
 
-### [Cephalopod AI — Search, RL & Neural Agents](https://github.com/PaoloPangallo/IA_Cephalopod)
-A multi-paradigm game-playing AI project comparing heuristic search, Minimax / Alpha-Beta, MCTS, Optuna tuning, Reinforcement Learning, Behavior Cloning and an AlphaZero-style neural agent.
+[**Explore application →**](https://github.com/PaoloPangallo/PSW_Ecommerce)
 
-**Tech:** Python · PyTorch · Reinforcement Learning · MCTS · Minimax · Optuna · Behavior Cloning
+</td>
+<td width="50%" valign="top">
 
-### [LLM + PDDL Automated Planning](https://github.com/PaoloPangallo/PDDL_LLM)
-Generate–validate–refine workflow combining LLMs, RAG and symbolic planning with Fast Downward.
+### 🐙 [Cephalopod AI](https://github.com/PaoloPangallo/IA_Cephalopod)
 
-**Tech:** Python · LangGraph · Ollama · PDDL · RAG · Symbolic AI
+**Search · Reinforcement Learning · Neural agents**
 
-### [Graph-Based Scientific Paper Recommendation](https://github.com/PaoloPangallo/Data-Mining-Streamlit)
-Graph-learning and embedding-based scientific-paper recommendation with metadata-aware reranking and an interactive interface.
+Game-playing AI experiments spanning Minimax, Alpha-Beta, MCTS, behavior cloning and AlphaZero-style agents.
 
-**Tech:** PyTorch · GNNs · scikit-learn · Streamlit · OpenAlex · NetworkX
+<img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/> <img alt="RL" src="https://img.shields.io/badge/Reinforcement_Learning-E98B45?style=flat-square"/>
 
-### [Electric Cable Instance Segmentation](https://github.com/PaoloPangallo/Cable-Instance_Segmentation)
-Transformer-based instance segmentation for thin electrical cables with geometry-aware post-processing.
+[**Explore algorithms →**](https://github.com/PaoloPangallo/IA_Cephalopod)
 
-**Tech:** PyTorch · Computer Vision · RF-DETR · Vision Transformers · PCA
+</td>
+</tr>
+</table>
 
-### [Multi-Agent RL for Traffic Signal Control](https://github.com/PaoloPangallo/SUMO_MARL)
-Multi-agent reinforcement learning for traffic-signal optimization in simulated urban networks.
+## ⚡ More applied AI
 
-**Tech:** PyTorch · SUMO · TraCI · RLlib · MARL · Graph Attention
+| Project | What it explores |
+| :-- | :-- |
+| [LLM + PDDL Planning](https://github.com/PaoloPangallo/PDDL_LLM) | Neuro-symbolic workflows: LLM generation, symbolic validation and refinement |
+| [Graph Paper Recommender](https://github.com/PaoloPangallo/Data-Mining-Streamlit) | Graph embeddings, GNN experiments and metadata-aware recommendation |
+| [Cable Instance Segmentation](https://github.com/PaoloPangallo/Cable-Instance_Segmentation) | Vision Transformers and geometry-aware computer vision |
+| [Traffic Signal MARL](https://github.com/PaoloPangallo/SUMO_MARL) | Multi-agent reinforcement learning in SUMO simulations |
 
----
+## 🧰 Toolkit
 
-## 🧠 Technical focus
+**AI / ML**
 
-**AI Engineering**  
-LLMs · MCP · Retrieval-Augmented Generation · GraphRAG · Agentic workflows · Tool integration · Knowledge Graphs
+![AI](https://img.shields.io/badge/LLMs%20%7C%20RAG%20%7C%20MCP%20%7C%20Agentic%20AI-7C5CFC?style=flat-square)
+![ML](https://img.shields.io/badge/PyTorch%20%7C%20scikit--learn%20%7C%20GNNs%20%7C%20RL-00A991?style=flat-square)
 
-**Machine Learning**  
-PyTorch · scikit-learn · Graph Neural Networks · Computer Vision · Reinforcement Learning
+**Engineering**
 
-**Backend & Data**  
-Python · FastAPI · Java · Spring Boot · PostgreSQL · Redis · Qdrant · Neo4j · SQL · REST APIs
+![Backend](https://img.shields.io/badge/Python%20%7C%20FastAPI%20%7C%20Java%20%7C%20Spring-244A80?style=flat-square)
+![Frontend](https://img.shields.io/badge/React%20%7C%20TypeScript%20%7C%20Angular-D95976?style=flat-square)
+![Data](https://img.shields.io/badge/PostgreSQL%20%7C%20Redis%20%7C%20Qdrant%20%7C%20Neo4j-0F928A?style=flat-square)
+![Dev](https://img.shields.io/badge/Git%20%7C%20Docker%20%7C%20Linux-DB8B32?style=flat-square)
 
-**Frontend & Engineering**  
-React · TypeScript · Angular · Git · Docker · Linux / WSL · Testing
+## 🎯 What I'm looking for
 
----
+I'm completing my Master's thesis in AI at the University of Calabria and looking for a **junior AI/ML, GenAI or AI software engineering** opportunity. I especially enjoy teams building usable products with reliable retrieval, well-defined tool integrations, APIs and evaluation.
 
-## 🎓 Current focus
+<div align="center">
 
-I'm completing my Master's thesis and preparing for my first professional role in **AI/ML Engineering, Generative AI or software-intensive AI systems**.
+**Let's connect and build something useful.**
 
-I'm particularly interested in teams where AI models are part of a larger engineered system: retrieval, tools, APIs, data, validation and user-facing applications.
+[![LinkedIn](https://img.shields.io/badge/Find_me_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paolo-pangallo-9aa456170/)
 
----
-
-## 📫 Contact
-
-- GitHub: [PaoloPangallo](https://github.com/PaoloPangallo)
-- Based in Italy 🇮🇹
-- Open to opportunities in **AI Engineering, Machine Learning, GenAI / LLMs and applied AI software**
+</div>
