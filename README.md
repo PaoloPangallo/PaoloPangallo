@@ -1,111 +1,50 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Paolo Pangallo — AI Engineering portfolio" />
+# Paolo Pangallo.
 
-<br />
+**Computer Engineering · Artificial Intelligence · AI Systems**
 
-**M.Sc. candidate in Computer Engineering — Artificial Intelligence · University of Calabria 🇮🇹**
+M.Sc. candidate at the University of Calabria, building practical systems at the intersection of machine learning, LLMs and software engineering.
 
-I build AI systems that connect **models, tools, data and real applications**.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paolo-pangallo-9aa456170/)
-[![GitHub](https://img.shields.io/badge/GitHub-Explore_projects-7C5CFC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PaoloPangallo?tab=repositories)
-![Focus](https://img.shields.io/badge/Open_to-Junior_AI%2FML_roles-00A991?style=for-the-badge)
+[Portfolio website ↗](https://paolopangallo.github.io/PaoloPangallo/) · [LinkedIn ↗](https://www.linkedin.com/in/paolo-pangallo-9aa456170/) · [Repositories ↗](https://github.com/PaoloPangallo?tab=repositories)
 
 </div>
 
-## ✦ Featured projects
+---
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## Selected work.
 
-### 🛍️ [MCP E-Commerce](https://github.com/PaoloPangallo/MCP_E-commerce)
+| Project | Area | What it does |
+| --- | --- | --- |
+| **[MCP E-Commerce ↗](https://github.com/PaoloPangallo/MCP_E-commerce)** | Agentic AI, MCP, RAG | Full-stack shopping assistant combining explicit tools, product retrieval, eBay integrations and user context. |
+| **[MTB GraphRAG ↗](https://github.com/PaoloPangallo/MTB_GRAPH_RAG)** | LLMs, Knowledge Graphs | Master's thesis research on traceable evidence retrieval, controlled orchestration and claim verification for Molecular Tumor Boards. |
+| **[PSW E-Commerce ↗](https://github.com/PaoloPangallo/PSW_Ecommerce)** | Java, Spring Boot, Angular | Complete full-stack commerce platform, with APIs, authentication and persistence. |
+| **[Cephalopod AI ↗](https://github.com/PaoloPangallo/IA_Cephalopod)** | Reinforcement Learning, Search | Game-playing AI experiments using Minimax, MCTS, learning-based agents and neural approaches. |
+| **[LLM + PDDL Planning ↗](https://github.com/PaoloPangallo/PDDL_LLM)** | Neuro-symbolic AI | Generate–validate–refine workflows combining language models and symbolic planning. |
+| **[Graph Paper Recommender ↗](https://github.com/PaoloPangallo/Data-Mining-Streamlit)** | Graph ML, Recommendation | Graph-based scientific paper recommendations with a Streamlit interface. |
+| **[Cable Segmentation ↗](https://github.com/PaoloPangallo/Cable-Instance_Segmentation)** | Computer Vision | Transformer-based instance segmentation for thin electrical cables. |
+| **[Traffic Signal MARL ↗](https://github.com/PaoloPangallo/SUMO_MARL)** | Multi-Agent RL | Traffic signal optimization experiments in SUMO. |
 
-**Agentic AI · MCP · RAG**
+## Technical focus.
 
-AI-assisted shopping platform integrating tool-driven agents, eBay, semantic search, seller analysis and user context with a full-stack web application.
+**AI and Machine Learning.** LLMs, RAG, MCP, GraphRAG, agentic workflows, PyTorch, scikit-learn, GNNs, computer vision, reinforcement learning.
 
-<img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/> <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
+**Backend and data.** Python, FastAPI, Java, Spring Boot, PostgreSQL, Redis, Qdrant, Neo4j.
 
-[**Explore architecture →**](https://github.com/PaoloPangallo/MCP_E-commerce#architecture)
+**Applications and engineering.** React, TypeScript, Angular, Git, Docker, Linux, APIs, testing.
 
-</td>
-<td width="50%" valign="top">
+## Currently.
 
-### 🧬 [MTB GraphRAG](https://github.com/PaoloPangallo/MTB_GRAPH_RAG)
+Completing my Master's thesis in Artificial Intelligence at the **University of Calabria**, and open to junior roles in **AI/ML engineering, GenAI and applied AI software**.
 
-**LLMs · Knowledge Graphs · Evidence verification**
-
-Master's thesis prototype exploring traceable retrieval, controlled orchestration and verifiable evidence for Molecular Tumor Boards.
-
-<img alt="Neo4j" src="https://img.shields.io/badge/Neo4j-4581C3?style=flat-square&logo=neo4j&logoColor=white"/> <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img alt="Research" src="https://img.shields.io/badge/Research-8B5CF6?style=flat-square"/>
-
-[**Explore research →**](https://github.com/PaoloPangallo/MTB_GRAPH_RAG#architecture)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🛒 [Full-Stack E-Commerce](https://github.com/PaoloPangallo/PSW_Ecommerce)
-
-**Software architecture · Java · Angular**
-
-Complete commerce application with authentication, product management, cart, orders, persistence and REST APIs.
-
-<img alt="Spring" src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/> <img alt="Angular" src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white"/>
-
-[**Explore application →**](https://github.com/PaoloPangallo/PSW_Ecommerce)
-
-</td>
-<td width="50%" valign="top">
-
-### 🐙 [Cephalopod AI](https://github.com/PaoloPangallo/IA_Cephalopod)
-
-**Search · Reinforcement Learning · Neural agents**
-
-Game-playing AI experiments spanning Minimax, Alpha-Beta, MCTS, behavior cloning and AlphaZero-style agents.
-
-<img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/> <img alt="RL" src="https://img.shields.io/badge/Reinforcement_Learning-E98B45?style=flat-square"/>
-
-[**Explore algorithms →**](https://github.com/PaoloPangallo/IA_Cephalopod)
-
-</td>
-</tr>
-</table>
-
-## ⚡ More applied AI
-
-| Project | What it explores |
-| :-- | :-- |
-| [LLM + PDDL Planning](https://github.com/PaoloPangallo/PDDL_LLM) | Neuro-symbolic workflows: LLM generation, symbolic validation and refinement |
-| [Graph Paper Recommender](https://github.com/PaoloPangallo/Data-Mining-Streamlit) | Graph embeddings, GNN experiments and metadata-aware recommendation |
-| [Cable Instance Segmentation](https://github.com/PaoloPangallo/Cable-Instance_Segmentation) | Vision Transformers and geometry-aware computer vision |
-| [Traffic Signal MARL](https://github.com/PaoloPangallo/SUMO_MARL) | Multi-agent reinforcement learning in SUMO simulations |
-
-## 🧰 Toolkit
-
-**AI / ML**
-
-![AI](https://img.shields.io/badge/LLMs%20%7C%20RAG%20%7C%20MCP%20%7C%20Agentic%20AI-7C5CFC?style=flat-square)
-![ML](https://img.shields.io/badge/PyTorch%20%7C%20scikit--learn%20%7C%20GNNs%20%7C%20RL-00A991?style=flat-square)
-
-**Engineering**
-
-![Backend](https://img.shields.io/badge/Python%20%7C%20FastAPI%20%7C%20Java%20%7C%20Spring-244A80?style=flat-square)
-![Frontend](https://img.shields.io/badge/React%20%7C%20TypeScript%20%7C%20Angular-D95976?style=flat-square)
-![Data](https://img.shields.io/badge/PostgreSQL%20%7C%20Redis%20%7C%20Qdrant%20%7C%20Neo4j-0F928A?style=flat-square)
-![Dev](https://img.shields.io/badge/Git%20%7C%20Docker%20%7C%20Linux-DB8B32?style=flat-square)
-
-## 🎯 What I'm looking for
-
-I'm completing my Master's thesis in AI at the University of Calabria and looking for a **junior AI/ML, GenAI or AI software engineering** opportunity. I especially enjoy teams building usable products with reliable retrieval, well-defined tool integrations, APIs and evaluation.
+---
 
 <div align="center">
 
-**Let's connect and build something useful.**
+### A minimal, monochrome portfolio.
 
-[![LinkedIn](https://img.shields.io/badge/Find_me_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paolo-pangallo-9aa456170/)
+[**Open the website ↗**](https://paolopangallo.github.io/PaoloPangallo/) · [**View its source ↗**](https://github.com/PaoloPangallo/PaoloPangallo/tree/main/docs)
+
+<sub>White canvas. Clear type. No gradients.</sub>
 
 </div>
