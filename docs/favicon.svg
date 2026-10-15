@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="19" fill="#141414"/><text x="11" y="42" fill="white" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" letter-spacing="-2">pp<tspan fill="#bdbdbd">.</tspan></text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <title>PP — Paolo Pangallo</title>
+  <rect width="96" height="96" rx="22" fill="#fff"/>
+  <path fill="#141414" fill-rule="evenodd" d="M17 18h28c15 0 24 8 24 21s-9 21-24 21H30v20H17V18Zm13 12v18h14c8 0 12-3 12-9s-4-9-12-9H30Z"/>
+  <path fill="#141414" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" paint-order="stroke fill" d="M42 40h20c14 0 23 8 23 21s-9 21-23 21h-7V69h7c6 0 10-3 10-8s-4-9-10-9h-7v30H42Z"/>
+  <path fill="#fff" d="M55 52h7c6 0 10 3 10 9s-4 8-10 8h-7z"/>
+</svg>
