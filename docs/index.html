@@ -41,8 +41,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;450;500;550;600;650;700;750&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css?v=8" />
-  <script src="./script.js?v=6" defer></script>
+  <link rel="stylesheet" href="./style.css?v=9" />
+  <script src="./script.js?v=7" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -52,35 +52,45 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a class="nav-identity" href="#top" aria-label="Paolo Pangallo — home"><span class="nav-mark" aria-hidden="true"><img src="./favicon.svg" alt="" width="44" height="44" /></span><span class="nav-name">Paolo Pangallo</span></a>
       <div class="nav-links" id="nav-links">
-        <a href="#work">Featured</a><a href="#explore">Projects</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#work">Featured</a><a href="#explore">Projects</a><a href="#systems">Explorer</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
         <a class="nav-contact" href="mailto:paolo.pangallo23@gmail.com" aria-label="Email Paolo Pangallo">Email me <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
       </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu" hidden><a href="#work">Featured</a><a href="#explore">Projects</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div class="mobile-menu" id="mobile-menu" hidden><a href="#work">Featured</a><a href="#explore">Projects</a><a href="#systems">Explorer</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   </header>
 
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-icon" aria-hidden="true">✳</span> Paolo Pangallo <span class="slash">/</span> AI &amp; Software</div>
-        <h1 id="hero-title">Hi, I'm Paolo.<br/><span>I work on AI systems,<br/>from models to software.</span></h1>
-        <p class="lead">I'm completing an MSc in Computer Engineering (Artificial Intelligence) at the <strong>University of Calabria</strong>. I work on retrieval, LLM applications, machine learning experiments and the engineering that connects them. This portfolio explains both what I built and the decisions behind it.</p>
-        <div class="hero-buttons"><a class="btn btn-dark" href="#work">Explore projects <span aria-hidden="true">↗</span></a><a class="btn btn-stroke" href="./Paolo_Pangallo_CV.pdf" download="Paolo_Pangallo_CV.pdf" type="application/pdf">Download CV <span aria-hidden="true">↓</span></a></div>
-        <p class="availability"><span class="availability-dot" aria-hidden="true"></span> Based in Calabria, Italy <span class="avail-sep">·</span> Open to junior AI/ML opportunities</p>
+        <div class="eyebrow hero-eyebrow"><span class="eyebrow-icon" aria-hidden="true">✳</span> AI / ML ENGINEERING <span class="slash">/</span> MSc AI @ UniCal</div>
+        <h1 id="hero-title">Hi, I'm<br/><span>Paolo Pangallo.</span></h1>
+        <p class="hero-statement">I build reliable AI systems<span class="dot">.</span></p>
+        <p class="lead">I'm completing an MSc in Computer Engineering, specializing in Artificial Intelligence. I build <strong>LLM applications, GraphRAG pipelines and software systems</strong>, focusing on practical implementation, clarity and verification.</p>
+        <ul class="hero-specialties" aria-label="Technical focus"><li>LLM &amp; Agentic Systems</li><li>GraphRAG &amp; Verification</li><li>Software Engineering</li></ul>
+        <div class="hero-buttons"><a class="btn btn-dark" href="#work">View projects ↗</a><a class="btn btn-stroke" href="./Paolo_Pangallo_CV.pdf" download="Paolo_Pangallo_CV.pdf" type="application/pdf">Download CV ↓</a><a class="hero-email" href="mailto:paolo.pangallo23@gmail.com">Email me ↗</a></div>
+        <p class="hero-featured">Featured work: <a href="#case-mcp">MCP E-Commerce</a><span aria-hidden="true">·</span><a href="#case-mtb">MTB GraphRAG</a><span aria-hidden="true">·</span><a href="#case-rl">Cephalopod AI</a></p>
       </div>
-      <div class="hero-stage" aria-label="Interactive project architecture explorer">
-        <div class="stage-header"><span class="stage-title"><span class="stage-square" aria-hidden="true">◈</span> system.explorer</span><span class="stage-meta"><span class="stage-led" aria-hidden="true"></span> Interactive overview</span></div>
-        <div class="stage-top"><p>Explore an architecture</p><div class="stage-tabs" role="group" aria-label="Choose an architecture"><button class="stage-tab active" type="button" data-system="mcp" aria-pressed="true">MCP</button><button class="stage-tab" type="button" data-system="mtb" aria-pressed="false">GraphRAG</button><button class="stage-tab" type="button" data-system="rl" aria-pressed="false">RL</button></div></div>
-        <div class="stage-pipeline" id="stage-pipeline" aria-label="Clickable system stages"></div>
-        <div class="stage-inspector" aria-live="polite"><div class="inspector-heading"><span id="inspector-step">01 / Input</span><span class="inspector-icon">↗</span></div><h3 id="inspector-title">User request</h3><p id="inspector-description">A natural-language shopping request starts the workflow.</p><a id="inspector-link" href="https://github.com/PaoloPangallo/MCP_E-commerce" target="_blank" rel="noopener noreferrer">View related source ↗</a></div>
-        <div class="stage-bottom"><span>ARCHITECTURE / CONCEPTUAL</span><span>SELECT A NODE TO INSPECT</span></div>
-      </div>
+      <aside class="profile-card" aria-label="Paolo Pangallo profile">
+        <div class="profile-card-label">PERSON / PROFILE</div>
+        <div class="profile-card-main"><img src="./profile-paolo.jpg" alt="Paolo Pangallo" width="220" height="220" decoding="async" fetchpriority="high" /><div><span class="profile-kicker">SOFTWARE × MACHINE LEARNING</span><h2>From ideas<br/>to systems.</h2><p>Engineering where models, data and real applications meet.</p></div></div>
+        <dl class="profile-facts"><div><dt>Education</dt><dd>MSc AI · University of Calabria</dd></div><div><dt>Location</dt><dd>Rende · Calabria, Italy</dd></div><div><dt>Focus</dt><dd>LLMs · GraphRAG · ML</dd></div></dl>
+        <p class="profile-status"><span class="availability-dot" aria-hidden="true"></span> Open to junior AI / ML opportunities</p>
+      </aside>
     </section>
 
-    <div class="snapshot-bar wrap" aria-label="Quick summary"><div><strong>AI</strong><span>Focus</span><p>AI / ML Engineering</p></div><div><strong>08</strong><span>Selected projects</span><p>Research &amp; applications</p></div><div><strong>MSc</strong><span>Education</span><p>Computer Engineering · AI</p></div><div><strong>IT</strong><span>Location</span><p>Calabria, Italy</p></div></div>
+    <section class="explorer-section wrap" id="systems" aria-labelledby="systems-title">
+      <div class="explorer-intro"><div class="section-index">00 <span>/</span> System explorer</div><h2 id="systems-title">See how the<br/>systems work<span class="dot">.</span></h2><p>Three projects, three approaches. Explore the architecture and inspect the relevant source code.</p><a class="underlined" href="#work">Explore featured projects ↗</a></div>
+  <div class="hero-stage" aria-label="Interactive project architecture explorer">
+          <div class="stage-header"><span class="stage-title"><span class="stage-square" aria-hidden="true">◈</span> system.explorer</span><span class="stage-meta"><span class="stage-led" aria-hidden="true"></span> Interactive overview</span></div>
+          <div class="stage-top"><p>Explore an architecture</p><div class="stage-tabs" role="group" aria-label="Choose an architecture"><button class="stage-tab active" type="button" data-system="mcp" aria-pressed="true">MCP</button><button class="stage-tab" type="button" data-system="mtb" aria-pressed="false">GraphRAG</button><button class="stage-tab" type="button" data-system="rl" aria-pressed="false">RL</button></div></div>
+          <div class="stage-pipeline" id="stage-pipeline" aria-label="Clickable system stages"></div>
+          <div class="stage-inspector" aria-live="polite"><div class="inspector-heading"><span id="inspector-step">01 / Input</span><span class="inspector-icon">↗</span></div><h3 id="inspector-title">User request</h3><p id="inspector-description">A natural-language shopping request starts the workflow.</p><a id="inspector-link" href="https://github.com/PaoloPangallo/MCP_E-commerce" target="_blank" rel="noopener noreferrer">View related source ↗</a></div>
+          <div class="stage-bottom"><span>ARCHITECTURE / CONCEPTUAL</span><span>SELECT A NODE TO INSPECT</span></div>
+        </div>
+    </section>
 
     <section class="feature-section wrap section-gap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><div class="section-index">01 <span>/</span> Selected work</div><h2 id="work-title">Selected projects.<br/>Behind the code<span class="dot">.</span></h2></div><p>A closer look at the problems, architectures, engineering decisions and limitations behind three selected projects.</p></div>

@@ -145,15 +145,16 @@ window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(
 updateProgress();
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
-const profilePicture = document.querySelector('.about-photo img');
-profilePicture?.addEventListener('error', () => { profilePicture.hidden = true; });
+document.querySelectorAll('.about-photo img, .profile-card-main img').forEach(img => {
+  img.addEventListener('error', () => { img.hidden = true; });
+});
 
 // Progressive enhancement: no JS, no IntersectionObserver or reduced motion
 // always means content stays immediately readable and visible.
 (function setupScrollMotion() {
   if (!canAnimate() || !('IntersectionObserver' in window)) return;
   const animated = [
-    ...document.querySelectorAll('.section-heading, .snapshot-bar > div, .case-art, .case-content, .library-card, .principle, .toolkit-intro, .skill-group, .about-left, .about-right, .footer-main > div:first-child')
+    ...document.querySelectorAll('.explorer-intro, .section-heading, .case-art, .case-content, .library-card, .principle, .toolkit-intro, .skill-group, .about-left, .about-right, .footer-main > div:first-child')
   ];
   const observer = new IntersectionObserver((entries, io) => {
     for (const entry of entries) {
@@ -186,7 +187,7 @@ profilePicture?.addEventListener('error', () => { profilePicture.hidden = true; 
 
 // Keep active section links accurate, even when scrolling into the footer.
 (function setupSectionTracking() {
- const sections = ['work','explore','approach','about','contact'].map(id => document.getElementById(id)).filter(Boolean);
+ const sections = ['systems','work','explore','approach','about','contact'].map(id => document.getElementById(id)).filter(Boolean);
  const links = [...document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]')];
  if (!sections.length || !links.length) return;
  let scheduled = false;
