@@ -226,3 +226,12 @@ img,svg{max-width:100%}svg{display:block}h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{font
   .decision-example-label{font-size:11px}
   .decision-example code{font-size:12px}
 }
+
+/* v8 brand — app-icon monogram, shared by navigation, footer and favicon. */
+.nav-mark{background:#fff;border:1px solid #dadada;overflow:hidden;padding:0;flex-shrink:0}
+.nav-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.footer-mark{font-size:initial;letter-spacing:normal;line-height:normal;color:inherit;padding-right:0}
+.footer-mark img{display:block;width:clamp(110px,13vw,170px);height:auto;aspect-ratio:1}
+@media(max-width:600px){
+ .nav-mark{width:39px;height:39px}
+}
