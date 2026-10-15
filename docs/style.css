@@ -343,3 +343,18 @@ img,svg{max-width:100%}svg{display:block}h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{font
  .profile-card-main img{width:82px;height:82px}
  .profile-card-main h2{font-size:20px}
 }
+
+/* Concise links from project descriptions to real, inspectable code. */
+.proof-panel{margin:23px 0 25px;padding:19px;border:1px solid var(--line-2);border-radius:17px;background:#f8f9fa}
+.proof-panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.proof-kicker{font:500 10px/1.4 var(--mono);letter-spacing:.08em;color:#374651}
+.proof-verified{font-size:11px;color:var(--muted)}
+.proof-intro{max-width:65ch;font-size:13px;line-height:1.55;color:#46515a;margin:0 0 15px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;list-style:none;margin:0;padding:0}
+.proof-step{padding:13px;background:#fff;border:1px solid #e2e6e9;border-radius:12px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.proof-step-head{display:flex;align-items:baseline;gap:8px;font-size:12px;line-height:1.35}
+.proof-no{color:#637480;font:500 10px/1 var(--mono)}
+.proof-step p{font-size:12px;line-height:1.5;color:#48545d;flex:1;margin:0}
+.proof-step a{align-self:flex-start;font-size:12px;font-weight:600;text-decoration:underline;text-decoration-color:#aab5bd;text-underline-offset:3px}
+.proof-step a:hover{text-decoration-color:currentColor}
+@media(max-width:760px){.proof-grid{grid-template-columns:1fr}.proof-panel{padding:15px}.proof-step{padding:12px}}
